@@ -1,1 +1,1 @@
-# [Opportunity-Hack Website](http://opportunity-hack.org}
+# [Opportunity-Hack Website](http://opportunity-hack.org)
