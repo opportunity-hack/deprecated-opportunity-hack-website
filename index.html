@@ -267,12 +267,9 @@
     $(function() {
       $(".video").click(function () {
         var theModal = $(this).data("target"),
-        videoSRC = $(this).attr("data-video"),
-        videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=1&showinfo=0&html5=0&autoplay=1";
-        $(theModal + ' iframe').attr('src', videoSRCauto);
-        $(theModal + ' button.close').click(function () {
-          $(theModal + ' iframe').attr('src', videoSRC);
-        });
+        videoSrc = $(this).attr("data-video"),
+        videoSrcAttr = videoSrc + "?modestbranding=1&rel=0&controls=1&showinfo=0&html5=0&autoplay=1";
+        $(theModal + ' iframe').attr('src', videoSrcAttr);
       });
 
       $('#videoModal').on('hidden.bs.modal', function () {
