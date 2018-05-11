@@ -114,7 +114,8 @@
         <div class="col-lg-6 text-center" style="margin-bottom:15px;">
           <h4>Opportunity Hack @ San Jose</h4>
           <h4>Aug 18 -19, California, US</h4>
-            <a href="https://opportunity-hack-san-jose-2018.devpost.com/" target="_blank" class="btn btn-primary btn-xl brand-link"><i class="fa fa-external-link" style="margin-right:10px;"></i>Register on Devpost </a>
+          <a href="https://opportunity-hack-san-jose-2018.devpost.com/" target="_blank" class="btn btn-primary btn-xl brand-link"><i class="fa fa-external-link" style="margin-right:10px;"></i>Register on Devpost </a>
+          <a class="btn btn-primary btn-xl brand-link form" data-form="https://docs.google.com/forms/d/e/1FAIpQLScloPT6tlFh86m0R6vBM9F1E9SPnYIgCyPbY1mrM8N2Oj2Bvw/" data-toggle="modal" data-target="#formModal"><i class="fa fa-wpforms" style="margin-right:10px;"></i>Register as a mentor</a>
         </div>
         <hr>
         <div class="col-lg-12 text-center" style="margin-top:15px;">
@@ -157,7 +158,7 @@
                 <h4>Oct 20 - 21, 2018</h4>
                 <p class="text-muted" style="margin-bottom:15px;">Connect.. Build .. and Empower organizations to change lives across the world. Join us in Chandler, Arizona to hack through the weekend & solve real world problems for NPOs! </p>
                 <p>&nbsp;</p>
-                <a href="https://opportunity-hack-2018-arizona.devpost.com/" target="_blank" class="btn btn-primary btn-xl brand-link"><i class="fa fa-external-link sr-icons  " style="margin-right:10px;"></i>  Register on Devpost </a>
+                <a href="https://opportunity-hack-2018-arizona.devpost.com/" target="_blank" class="btn btn-primary btn-xl brand-link"><i class="fa fa-external-link sr-icons  " style="margin-right:10px;"></i>  Register as a participant </a> <br/>
                 <a href="https://goo.gl/forms/aFy9NeE8mZptePIb2" target="_blank" class="btn btn-primary btn-xl brand-link"><i class="fa fa-external-link" style="margin-right:10px;"></i>Register as an Industry Partner</a>
             </div>
         </div>
@@ -167,7 +168,10 @@
               <h3>Opportunity Hack 2018 - San Jose </h3>
               <h4>Aug 18 -19, 2018</h4>
               <p class="text-muted" style="margin-bottom:15px;">Our sixth annual Opportunity Hack will open up soon for all bay area participants.  Check out the devpost link for more information.</p>
-              <a href="https://opportunity-hack-san-jose-2018.devpost.com/" target="_blank" class="btn btn-primary btn-xl brand-link"><i class="fa fa-external-link sr-icons  " style="margin-right:10px;"></i>  Register on Devpost </a>
+              <p>&nbsp;</p> <!-- Hardcode fix to align buttons to the Arizona section on the left. Remove as content increases in the above <p> tag -->
+              <p>&nbsp;</p>
+              <a href="https://opportunity-hack-san-jose-2018.devpost.com/" target="_blank" class="btn btn-primary btn-xl brand-link"><i class="fa fa-external-link sr-icons  " style="margin-right:10px;"></i>  Register as a participant </a> <br/>
+              <a class="btn btn-primary btn-xl brand-link form" data-form="https://docs.google.com/forms/d/e/1FAIpQLScloPT6tlFh86m0R6vBM9F1E9SPnYIgCyPbY1mrM8N2Oj2Bvw/" data-toggle="modal" data-target="#formModal"><i class="fa fa-wpforms" style="margin-right:10px;"></i>Register as a mentor</a>
           </div>
         </div>
         <div class="col-lg-12 text-center" style="margin-top:15px;">
@@ -251,6 +255,24 @@
     </div>
   </div>
 
+  <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+    <div class="modal-dialog" style="padding-top: 5%"> <!-- putting in line css to supress the top paddign from video modal-->
+      <div class="modal-content">
+        <!--<div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>-->
+        <div class="modal-body">
+          <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+          <iframe src="" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- jQuery -->
   <script src="vendor/jquery/jquery.min.js"></script>
 
@@ -266,6 +288,8 @@
   <script src="js/creative.min.js"></script>
 
   <script>
+
+    //function for video modal
     $(function() {
       $(".video").click(function () {
         var theModal = $(this).data("target"),
@@ -276,6 +300,20 @@
 
       $('#videoModal').on('hidden.bs.modal', function () {
           $("#videoModal iframe").attr("src", "");
+      });
+    });
+
+    // function for mentor registration modal
+    $(function() {
+      $(".form").click(function () {
+        var theModal = $(this).data("target"),
+        formSrc = $(this).attr("data-form"),
+        formSrcAttr = formSrc + "viewform?embedded=true";
+        $(theModal + ' iframe').attr('src', formSrcAttr);
+      });
+
+      $('#formModal').on('hidden.bs.modal', function () {
+          $("#formModal iframe").attr("src", "");
       });
     });
   </script>
