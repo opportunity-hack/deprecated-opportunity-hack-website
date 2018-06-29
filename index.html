@@ -115,7 +115,7 @@
           <h4>Opportunity Hack @ San Jose</h4>
           <h4>Aug 18 -19, California, US</h4>
           <a href="https://opportunity-hack-san-jose-2018.devpost.com/" target="_blank" class="btn btn-primary btn-xl brand-link"><i class="fa fa-external-link" style="margin-right:10px;"></i>Register on Devpost </a>
-          <a class="btn btn-primary btn-xl brand-link form" data-form="https://docs.google.com/forms/d/e/1FAIpQLScloPT6tlFh86m0R6vBM9F1E9SPnYIgCyPbY1mrM8N2Oj2Bvw/" data-toggle="modal" data-target="#formModal"><i class="fa fa-wpforms" style="margin-right:10px;"></i>Register as a mentor</a>
+          <!-- <a class="btn btn-primary btn-xl brand-link form" data-form="https://docs.google.com/forms/d/e/1FAIpQLScloPT6tlFh86m0R6vBM9F1E9SPnYIgCyPbY1mrM8N2Oj2Bvw/" data-toggle="modal" data-target="#formModal"><i class="fa fa-wpforms" style="margin-right:10px;"></i>Register as a mentor</a> -->
         </div>
         <hr>
         <div class="col-lg-12 text-center" style="margin-top:15px;">
@@ -171,7 +171,7 @@
               <p>&nbsp;</p> <!-- Hardcode fix to align buttons to the Arizona section on the left. Remove as content increases in the above <p> tag -->
               <p>&nbsp;</p>
               <a href="https://opportunity-hack-san-jose-2018.devpost.com/" target="_blank" class="btn btn-primary btn-xl brand-link"><i class="fa fa-external-link sr-icons  " style="margin-right:10px;"></i>  Register as a participant </a> <br/>
-              <a class="btn btn-primary btn-xl brand-link form" data-form="https://docs.google.com/forms/d/e/1FAIpQLScloPT6tlFh86m0R6vBM9F1E9SPnYIgCyPbY1mrM8N2Oj2Bvw/" data-toggle="modal" data-target="#formModal"><i class="fa fa-wpforms" style="margin-right:10px;"></i>Register as a mentor</a>
+              <!-- <a class="btn btn-primary btn-xl brand-link form" data-form="https://docs.google.com/forms/d/e/1FAIpQLScloPT6tlFh86m0R6vBM9F1E9SPnYIgCyPbY1mrM8N2Oj2Bvw/" data-toggle="modal" data-target="#formModal"><i class="fa fa-wpforms" style="margin-right:10px;"></i>Register as a mentor</a> -->
           </div>
         </div>
         <div class="col-lg-12 text-center" style="margin-top:15px;">
@@ -304,18 +304,18 @@
     });
 
     // function for mentor registration modal
-    $(function() {
-      $(".form").click(function () {
-        var theModal = $(this).data("target"),
-        formSrc = $(this).attr("data-form"),
-        formSrcAttr = formSrc + "viewform?embedded=true";
-        $(theModal + ' iframe').attr('src', formSrcAttr);
-      });
+    // $(function() {
+    //   $(".form").click(function () {
+    //     var theModal = $(this).data("target"),
+    //     formSrc = $(this).attr("data-form"),
+    //     formSrcAttr = formSrc + "viewform?embedded=true";
+    //     $(theModal + ' iframe').attr('src', formSrcAttr);
+    //   });
 
-      $('#formModal').on('hidden.bs.modal', function () {
-          $("#formModal iframe").attr("src", "");
-      });
-    });
+    //   $('#formModal').on('hidden.bs.modal', function () {
+    //       $("#formModal iframe").attr("src", "");
+    //   });
+    // });
   </script>
 
 </body>
